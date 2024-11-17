@@ -14,7 +14,7 @@ const VideoSummarizer = () => {
     setSummary('');
 
     try {
-      const response = await axios.post('/api/video/summarize', { videoUrl });
+      const response = await axios.post('https://skillio-backend-eet7.onrender.com/api/video/summarize', { videoUrl });
       setSummary(response.data.summary);
     } catch (error) {
       console.error('Error summarizing video:', error);
