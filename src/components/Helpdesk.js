@@ -8,7 +8,7 @@ const Helpdesk = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/helpdesk/query', { query });
+      const response = await axios.post('https://skillio-backend-eet7.onrender.com/api/helpdesk/query', { query });
       setAnswer(response.data.answer);
     } catch (error) {
       console.error('Error querying helpdesk:', error);
