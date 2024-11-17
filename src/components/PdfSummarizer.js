@@ -18,7 +18,7 @@ const PdfSummarizer = () => {
     formData.append('pdf', file);
 
     try {
-      const response = await axios.post('/api/pdf/summarize', formData, {
+      const response = await axios.post('https://skillio-backend-eet7.onrender.com/api/pdf/summarize', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setSummary(response.data.summary);
@@ -30,7 +30,7 @@ const PdfSummarizer = () => {
   const handleQuestion = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/pdf/question', {
+      const response = await axios.post('https://skillio-backend-eet7.onrender.com/api/pdf/question', {
         question,
         context: summary,
       });
