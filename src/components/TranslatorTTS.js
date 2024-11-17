@@ -33,7 +33,7 @@ const TranslatorTTS = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('/api/translate', {
+      const response = await axios.post('https://skillio-backend-eet7.onrender.com/api/translate', {
         inputText,
         action
       });
